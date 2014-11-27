@@ -6,13 +6,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class MyConnection {
-	private Connection connection;
-	private Statement statement;
-	private String url = "jdbc:mysql://localhost:3306/base";
-	private String user = "root";
-	private String password = "root";
+	private static Connection connection;
+	private static Statement statement;
+	private static String url = "jdbc:mysql://localhost:3306/base";
+	private static String user = "root";
+	private static String password = "root";
 
-	public Connection giveMeConnectionPlease() {
+	public static Connection giveMeConnectionPlease() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("driver loaded ...");
@@ -26,7 +26,7 @@ public class MyConnection {
 		return connection;
 	}
 
-	public Statement giveMeStatementPlease() {
+	public static Statement giveMeStatementPlease() {
 		try {
 			statement = giveMeConnectionPlease().createStatement();
 			System.out.println("statement loaded ...");
