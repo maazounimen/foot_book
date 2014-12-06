@@ -15,6 +15,7 @@
 		<!-- this will show us all sql statements -->
 		<property name="hibernate.show_sql">true</property>
 		<!-- mapping files -->
+		<mapping resource="tn/edu/esprit/cs/foot_book/model/User.hbm.xml" />
 		<mapping resource="tn/edu/esprit/cs/foot_book/model/Booking.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
