@@ -4,13 +4,13 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.classic.Session;
 
-public class UtileHibernate {
+public class HibernateUtilities {
 
 	private SessionFactory sessionFactory;
 	private Session session;
-	private static UtileHibernate instance;
+	private static HibernateUtilities instance;
 
-	private UtileHibernate() {
+	private HibernateUtilities() {
 	}
 
 	public Session getSession() {
@@ -23,9 +23,9 @@ public class UtileHibernate {
 		return session;
 	}
 
-	public static UtileHibernate getInstance() {
+	public static HibernateUtilities getInstance() {
 		if (instance == null) {
-			instance = new UtileHibernate();
+			instance = new HibernateUtilities();
 
 		}
 		return instance;
