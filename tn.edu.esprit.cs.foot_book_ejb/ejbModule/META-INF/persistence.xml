@@ -7,19 +7,23 @@
 		<class>tn.edu.esprit.cs.foot_book_ejb.model.Stadium</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.model.User</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.manyToManyBi.K</class>
+		<class>tn.edu.esprit.cs.foot_book_ejb.training.manyToManyBi.L</class>
+		<class>tn.edu.esprit.cs.foot_book_ejb.training.manyToManyWhithInfo.Employee</class>
+		<class>tn.edu.esprit.cs.foot_book_ejb.training.manyToManyWhithInfo.Participation</class>
+		<class>tn.edu.esprit.cs.foot_book_ejb.training.manyToManyWhithInfo.ParticipationId</class>
+		<class>tn.edu.esprit.cs.foot_book_ejb.training.manyToManyWhithInfo.Project</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToManyBi.E</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToManyBi.F</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToManyUni.G</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToManyUni.H</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToManyUni.I</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToManyUni.J</class>
+		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToManyUni.One</class>
+		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToManyUni.Tow</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToOneBi.A</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToOneBi.B</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToOneUni.C</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToOneUni.D</class>
-		<class>tn.edu.esprit.cs.foot_book_ejb.training.manyToManyBi.L</class>
-		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToManyUni.One</class>
-		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToManyUni.Tow</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create" />
 		</properties>
