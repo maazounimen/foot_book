@@ -8,7 +8,7 @@ import tn.edu.esprit.cs.foot_book_ejb.model.Admin;
 import tn.edu.esprit.cs.foot_book_ejb.model.Player;
 import tn.edu.esprit.cs.foot_book_ejb.services.interfaces.ManagementServicesRemote;
 
-public class TestSayAhla {
+public class InitDb {
 	public static void main(String[] args) {
 		try {
 			Context context = new InitialContext();
