@@ -4,7 +4,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import tn.edu.esprit.cs.foot_book_ejb.model.User;
+import tn.edu.esprit.cs.foot_book_ejb.model.Admin;
+import tn.edu.esprit.cs.foot_book_ejb.model.Player;
 import tn.edu.esprit.cs.foot_book_ejb.services.interfaces.ManagementServicesRemote;
 
 public class TestSayAhla {
@@ -18,10 +19,21 @@ public class TestSayAhla {
 
 			proxy.sayAhla("ronaldo");
 
-			User user = new User();
-			user.setName("foulen");
+			Admin admin = new Admin();
+			admin.setName("admin");
+			admin.setAccessLevel("high level");
 
-			proxy.save(user);
+			Player player = new Player();
+			player.setName("playerOne");
+			player.setAccount("primium");
+
+			Player player2 = new Player();
+			player2.setName("playerTwo");
+			player2.setAccount("pro");
+
+			proxy.save(admin);
+			proxy.save(player);
+			proxy.save(player2);
 
 		} catch (NamingException e) {
 			e.printStackTrace();
