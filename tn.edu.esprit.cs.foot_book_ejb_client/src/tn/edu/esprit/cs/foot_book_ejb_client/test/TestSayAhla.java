@@ -4,6 +4,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import tn.edu.esprit.cs.foot_book_ejb.model.User;
 import tn.edu.esprit.cs.foot_book_ejb.services.interfaces.ManagementServicesRemote;
 
 public class TestSayAhla {
@@ -17,8 +18,12 @@ public class TestSayAhla {
 
 			proxy.sayAhla("ronaldo");
 
+			User user = new User();
+			user.setName("foulen");
+
+			proxy.save(user);
+
 		} catch (NamingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
