@@ -1,12 +1,16 @@
 package tn.edu.esprit.cs.foot_book_ejb.training.relationshipSamples.services;
 
+import java.util.List;
+
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import tn.edu.esprit.cs.foot_book_ejb.training.relationshipSamples.Client;
 import tn.edu.esprit.cs.foot_book_ejb.training.relationshipSamples.CreditCard;
 import tn.edu.esprit.cs.foot_book_ejb.training.relationshipSamples.Freelancer;
+import tn.edu.esprit.cs.foot_book_ejb.training.relationshipSamples.Job;
 
 /**
  * Session Bean implementation class ClientServices
@@ -69,6 +73,19 @@ public class ClientServices implements ClientServicesRemote,
 		}
 
 		return freelancerFound;
+	}
+
+	@Override
+	public List<Job> findAllJobsByFreelancerId(int id) {
+		List<Job> jobs = null;
+		String jpql = "select j from Job j where j.freelancer.id=" + id;
+		Query query = entityManager.createQuery(jpql);
+		try {
+			jobs = query.getResultList();
+		} catch (Exception e) {
+			System.err.println("jobs not found ...");
+		}
+		return jobs;
 	}
 
 }
