@@ -4,6 +4,10 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<persistence-unit name="tn.edu.esprit.cs.foot_book_ejb">
 		<jta-data-source>java:/foot_book_DS</jta-data-source>
+		<class>tn.edu.esprit.cs.foot_book_ejb.model.Admin</class>
+		<class>tn.edu.esprit.cs.foot_book_ejb.model.Booking</class>
+		<class>tn.edu.esprit.cs.foot_book_ejb.model.BookingId</class>
+		<class>tn.edu.esprit.cs.foot_book_ejb.model.Player</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.model.Stadium</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.model.User</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.manyToManyBi.K</class>
@@ -24,8 +28,6 @@
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToOneBi.B</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToOneUni.C</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.oneToOneUni.D</class>
-		<class>tn.edu.esprit.cs.foot_book_ejb.model.Admin</class>
-		<class>tn.edu.esprit.cs.foot_book_ejb.model.Player</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.relationshipSamples.Client</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.relationshipSamples.CreditCard</class>
 		<class>tn.edu.esprit.cs.foot_book_ejb.training.relationshipSamples.Freelancer</class>

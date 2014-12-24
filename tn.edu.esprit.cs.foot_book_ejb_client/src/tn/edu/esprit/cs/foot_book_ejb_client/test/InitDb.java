@@ -6,6 +6,7 @@ import javax.naming.NamingException;
 
 import tn.edu.esprit.cs.foot_book_ejb.model.Admin;
 import tn.edu.esprit.cs.foot_book_ejb.model.Player;
+import tn.edu.esprit.cs.foot_book_ejb.model.Stadium;
 import tn.edu.esprit.cs.foot_book_ejb.services.interfaces.ManagementServicesRemote;
 
 public class InitDb {
@@ -37,9 +38,17 @@ public class InitDb {
 			player2.setLogin("player2");
 			player2.setPassword("player2");
 
+			Stadium stadium = new Stadium();
+			stadium.setName("rades");
+
+			Stadium stadium2 = new Stadium();
+			stadium2.setName("marsa");
+
 			proxy.save(admin);
 			proxy.save(player);
 			proxy.save(player2);
+			proxy.saveStadium(stadium);
+			proxy.saveStadium(stadium2);
 
 		} catch (NamingException e) {
 			e.printStackTrace();

@@ -1,11 +1,13 @@
 package tn.edu.esprit.cs.foot_book_ejb.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class User implements Serializable {
@@ -18,6 +20,8 @@ public class User implements Serializable {
 	private String name;
 	private String login;
 	private String password;
+
+	private List<Booking> bookings;
 
 	public User() {
 	}
@@ -54,6 +58,15 @@ public class User implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	@OneToMany(mappedBy = "user")
+	public List<Booking> getBookings() {
+		return bookings;
+	}
+
+	public void setBookings(List<Booking> bookings) {
+		this.bookings = bookings;
 	}
 
 }
