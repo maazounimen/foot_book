@@ -21,15 +21,21 @@ public class InitDb {
 
 			Admin admin = new Admin();
 			admin.setName("admin");
+			admin.setLogin("admin");
+			admin.setPassword("admin");
 			admin.setAccessLevel("high level");
 
 			Player player = new Player();
 			player.setName("playerOne");
 			player.setAccount("primium");
+			player.setLogin("player");
+			player.setPassword("player");
 
 			Player player2 = new Player();
 			player2.setName("playerTwo");
 			player2.setAccount("pro");
+			player2.setLogin("player2");
+			player2.setPassword("player2");
 
 			proxy.save(admin);
 			proxy.save(player);
